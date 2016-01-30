@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Science - Data Products Assignment</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Data Science - Data Products Assignment">
+  <meta name="author" content="hmarroquin">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Data Science - Data Products Assignment</h1>
+    <h2>Dog to Human Years</h2>
+    <p>hmarroquin<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The Dog to Human Years Shiny app was devloped exclusively for the Coursera Data Science Specialization, Data Products. It showcases the quick web development capabilities that R supports.</p>
+
+<p>ShinyApps are an incteractive platform to distribute and interface with the end users.  The Data solution is all developed in R and advocates for a simplistic User Interface which allows for quick turn around solutions.</p>
+
+<p>While the app presented here is simple and straight forward, the complexity of the statistical model behind it can be much more complex. The idea being that users can interact with models built by data scientists. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>For the first two years, a dog year is equal to 10.5 human years. After that, each dog year equals 4 human years. This calculation is based on studies that indicate dogs, except maybe larger breeds, develop more quickly in the first two years of life.</p>
+
+<p><em>Further Reading:</em></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Aging_in_dogs">https://en.wikipedia.org/wiki/Aging_in_dogs</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Calculation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Here&#39;s a quick look at the calculation engine behind the app. It performs a step calculation for dogs under 3 years old and upscales for Dogs over 2 Years old, outputting a human year equivalency.</p>
+
+<pre><code class="r">dog2human &lt;- function(Dog)(
+      if (Dog &lt; 3) {
+           Dog*10.5
+      }else {
+           21 + (Dog - 2)*4
+      }
+)
+dog2human(4)
+</code></pre>
+
+<pre><code>## [1] 29
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Woof</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Take care of your pups, they grow all too quickly!</p>
+
+<div style='text-align: center;'>
+    <img height='500' src='pup.jpg' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Summary'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Background'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Calculation'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Woof'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
